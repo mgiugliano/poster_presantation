@@ -2,6 +2,10 @@
 %Amo
 %Dec 2018
 
+It is the first draft, when I read it non stop it takes a bit more than 5 min,
+could you please review it. 
+thank you
+
 
 # starter
 
