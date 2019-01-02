@@ -12,43 +12,43 @@ thank you
 
 *something that capture attention, remote from the content but absolutely relevant.*
 
-There is a long lasting debate over whether the computers are good analogy for the brain or not, it is not settled yet, but everyone agrees that brains do some sort of computation.
-In computers that we built for ourselves, we know its compartments, not only the hardware like CPU or hard disk, but also software, we know that for example the units of information in computers are 0 or 1. but what is the computational unit in the brain? is it the timing of the spikes or is it the number of the spikes? how information get transferred? there are many unanswered questions at this fundamental level, one of them is about the presence of correlations at different spatial and temporal scales through out the brain. In our project we will try to answer what biophysical factors may play role in its emergence.
+There is a long standing debate on whether or not computers are a good analogy for the brain. It has not settled yet, but researchers agrees that the brain performs some sort of computation.
+In computers built by us, we understand their compartments. Not only their hardware, such as the CPU or the storage memory hard disk, but also their software. We know that, for example, the units of information processing in computers are 0 or 1. What is the computational unit in the brain? Is it the precise timing of the spikes or is it the spike rate? How does information get transferred or stored? There are therefore many unanswered questions at this fundamental level. One of them is about the existence of correlations at different spatial and temporal scales, through out the brain. In our project, we will try to answer what biophysical factors play role in the emergence of correlations.
 
 
-# what is the question
+# what is the scientific question?
 
 *clear definition and using figure to explain the example situation (cortical neurons embedded in the same microcircuit)*
 
-## what is correlation
+## what are correlations?
 
-But what do we mean when we say correlations? In probability theory, it means how two different sets of variables are related to each other. The Pearson correlation that you are familiar with. In neurophysiology this term has been used to describe the association between different physiological measures, be it synaptic activation timing, membrane potential fluctuations or the emitted spikes.
+But what do we mean by "correlations"? In probability theory, it means that two variables are related to each other and co-vary. The Pearson correlation, you are familiar with, is an example of estimating correlation. In neurophysiology, the term "correlation" has been used to describe the *similarity* and *covariance* between different physiological measures, such as the synaptic activation timing, the subthreshold membrane potential fluctuations, or the emitted spikes.
 
-Different forms of correlations at different time scale and locations in the brain has been observed, in cortical and sub cortical areas, in different global states of the brain, anaesthesia or wakefulness, between pairs of neurons or at the network and global scale. Even between sub threshold membrane potential of the neurons.
+Correlations between neuronal activity has been observed in the brain at different time scale and locations. For instance. in cortical and sub cortical areas, across distinct global states of the brain (such as anaesthesia or wakefulness), between specific pairs of neighboring neurons or at the network- and global scales. 
 
-Here we are interested in a very specific form of correlation emergence: consider this situation -using figures- here we have a network of interconnected neurons, these two neurons that are depicted with different colours, they are *not* connected to each other. They receive many inputs from many different neurons, but a minority of these inputs are shared. You see it in --- colour. And here you see the recorded spike trains of these two neurons. In simple terms, what we are interested in, is the correlation between the amount of common input that theses two cells receive, and the amount of **co**variability that they show in their spiking patterns. It is called spike count correlation.
+Here, we focus on a very specific measure or definition for correlated neural activity: the correlations determined by common neuronal inputs (also known as "external"). Consider this situation -using figures- here we have a network of interconnected neurons, these two neurons (depicted by different colours) are *not* synaptically connected to each other. They receive inputs from many different presynaptic neurons, but a fraction of these inputs is shared. You see it in --- colour. And here you see the recorded spike trains of these two neurons. In simpler terms, we are interested in the similarity of the spiking activity of a neuronal pair (their **co**variability) given a certain amount of common input that theses two cells receive. We quantify such a covariability in terms of the similarity in the number of spikes, known as "spike-count correlation".
 
-## what are the exact questions
+## what are the exact research questions?
 
-So what is our question in this project? we know that cortical neurons are hugely heterogeneous in their spiking pattern, for instance, pyramidal cells with their progressive accommodation of a regular spiking pattern or fast spiking interneurons with no accommodation -using figures-. We question whether this cell e-type diversity can have quantitative effect on the correlations? And if it is the case then what biophysical properties of the membrane are contributing? Also we will manipulate the statistics of the inputs to evaluate the effect of different firing rate and different background synaptic activity on the correlations.
+Cortical neurons are known to be hugely heterogeneous in their own spiking patterns. for instance, excitatory pyramidal cells display a progressive accommodation of an otherwise regular spiking pattern. Inhibitory fast spiking interneurons display instead no accommodation and very high rates of spiking -using figures-. We ask (1) whether such a cell electrophysiological diversity could have quantitative effects on the spike-count correlations. And (2) if it is the case, what membrane biophysical properties are contributing to it? Also (3) we ask which is the effect of different firing rates or different background synaptic activity on the spike-count correlations.
 
-# method
+# Method
 
-How we approach this questions? we will use mathematical modelling of the neuron function. The models are obtained from blue brain project. They are in the domain of conductance based models and morphologically realistic. And for simulations we will use Flemish super computer.
+How do we approach these questions? We will use mathematical modelling of the neuron function. The models are obtained from Human Brain Project, which is a large collaboratory project involving experimentalists and theoreticians. These models are of the variety known as "conductance-based" and "morphologically realistic". They both include the precise kinetics of ion channel gating and incorporate cellular morphology (by cable-theory) in the model description. For simulating the models, we will use the Flemish super computers network.
 
-We will use two forms of stimulations, current driven and conductance based. In both cases as depicted here -using figures-, the stimulation composed of superposition of two components, one independent input and one common input. The common part will be generated identically in trials but the independent component will vary by manipulating the statistics of the input. This setting will give us the freedom to change the amount of shared input or firing frequency of the output easily. Just one cell needs to be stimulated and recorded at the time, as the shared common input is identical in trials.  
+By increasing progressively its realism, we will mimick synaptic inputs in two ways: current-driven and conductance-based. In both cases, depicted here -using figures-, the stimulus reaching every neuron of the pair will be composed of the superposition of two components, one independent and one "common", or shared by the neuronal pair. The common part will be generated identically in trials, while the independent component will vary. The statistical properties of both components will be manipulating to explore distinct neuronal firing regimes. This setting gives us the freedom to change the amount of shared input as well as the output firing frequency, easily. We will then estimate the spike-count correlations by analysing the spike trains emitted by the neuornal pair, as we change the fraction of common inputs.  
 
-conductance driven stimulation will let us to have both excitatory and inhibitory stimulation. The conductance stimulations mimic synaptic conductances mediated by AMPA- and by GABA-A-receptors.
+I note that the "conductance-driven" stimuli will let us to simulate accurately both excitatory and inhibitory inputs. Indeed, such a conductance stimuli mimic synaptic inputs, mediated by AMPA- and by GABA-A-receptors.
 
-stimulations will be in the form of one long waveform that will last 100 seconds. Blocks of experiment will be repeated 1 to 5 times with constant statistics but the different sets of block repetitions will have different statistics.
+The stimuli will be in the form of one long waveform, lasting 100 seconds. Blocks of experiment will be repeated 1 to 5 times with constant statistics but the different sets of block repetitions will have different statistics.
 
-Common input will be identical across repetition of blocks and cell types. This will be achieved by using an identical seed for pseudo-random number generator, which will be used for generating the shared component. 
+Common input will be identical across repetition of blocks and cell types. This will be achieved by using an identical seed for a pseudo-random number generator, which will be used for generating the shared component. 
 
-# shortcomings & alternatives 
+# Shortcomings & Alternative approaches 
 
-There are at least two potential limitation for this approach, one, is the complexity of the models, we use multi compartmental models with interdependent parameters, so manipulation of these parameters is hard also tracing back the findings. It is more or less like a black box. The alternative would be using a single compartmental model but in that case it will greatly reduce the biophysical relevance of the model.
+There are at least two potential limitations for our approach: (1) the complexity of the models. Multi-compartmental models of neurons have a large number of interdependent parameters. The exploration and interpretation of these parameters are hard. Despite, these models are not like a black box, they have too many degrees of freedom. An alternative would be to use simpler models, such as single-compartmental models, at the expense of greatly reducing their biophysical accuracy.
 
-Another limitation is the confinement of all activation to the soma. Both current and conductance driven stimulations will be injected to the soma. It means that although we will use conductance based stimulation to mimic dendritically distributed inputs, still the point nature of the conductance injection has an effect. A possible alternative is to use a methodology for direct activation of synaptic bouton.
+Another limitation is (2) the confinement of all synaptic stimuli to the soma. Both current- and conductance-driven stimuli will be in fact injected to the soma. This is done to replicate an actual experiments, performed in brain slices. However, such a strategy fails to mimic dendritically-distributed inputs, as conductance injection has by definition a "point" nature. An alternative is to use a simulation methodology for direct activation of synaptic bouton. This will be adopted if time allows it.
 
 
 
